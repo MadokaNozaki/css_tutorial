@@ -8,17 +8,171 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   box-sizing: border-box;
 }
 
-body {
-  color: #444;
-  background-color: #aaa;
+a{
+  text-decoration: none;
 }
+
+body {
+  color: #444;*/
+  /*background-color: #aaa;*/
+  background-color: rgb(0, 200, 200);
+  padding:0px 40px;
+}
+header{
+  height: 150px;
+  width: auto;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main{
+  padding: 20px;
+  background-color: rgb(0, 247, 255);
+  width:60%;
+  float:right;
+}å
 
 /* 全体を真ん中に配置 */
 .container {
   width: 980px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #666;
+  padding:25px;
+  /*background-color: #666;*/
+  background-color:white;
   box-shadow: rgba(0, 0, 0, .4) 0 0 8px;
   overflow: hidden; // floatを使った場合の対策
+}
+
+h1{
+  font-size:38px;
+}
+h2{
+  font-size:28px;
+}
+h3{
+  font-size:24px;
+}
+h4{
+  font-size:20px;
+}
+
+.article__image{
+  width: 50%;
+  height: 50%;
+}
+
+.about-author__image{
+  width: 10%;
+  height: 10%;
+}
+
+/*global-nav*/
+.global-nav{
+  background-color: cadetblue;
+}
+
+.global-nav__items{
+  padding: 20px;
+}
+.global-nav__items li{
+  float: left;
+  padding:20px;
+}
+
+/*bread*/
+.bread-crumbs{
+  background-color: burlywood;
+  padding:0px 20px;
+}
+.bread-crumbs__items li{
+  float:left;
+  padding: 10px;
+}
+
+/*ad*/
+.top-ads{
+}
+.top-ads__item{
+
+  padding:5px;
+  float: left;
+}
+
+/*header*/
+.main-header{
+  
+}
+.main-header__title{
+
+}
+/*article*/
+article{
+  background-color: aliceblue;
+}
+.article__title{
+}
+.article__paragraph{
+}
+.article__sub-title{
+}
+.article__unorder-list{
+
+}
+.article__unorder-list__item{
+
+}
+.article__blockquote{
+
+}
+.article__sub-sub-title{
+
+}
+.article__order-list{
+
+}
+.article__order-list__item{
+
+}
+
+/*form*/
+.form{
+  background-color: aquamarine;
+}
+.form__title{
+
+}
+.form-item{
+
+}
+.form-item__lavel{
+
+}
+/*aside*/
+aside{
+  background-color: coral;
+  float: left;
+  padding:20px;
+}
+/*footer*/
+footer{
+  background-color: bisque;
+  width:100%;
+  height:200px;
+}
+.footer-nav{
+  background-color:rgb(200, 220, 23)
+}
+.footer-nav__item{
+
+}
+.footer-nav__items{
+
+}
+.about-author{
+  background-color: cornflowerblue;
+  padding:20px;
+}
+.about-author__descriptions{
+
 }
