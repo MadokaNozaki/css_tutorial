@@ -10,6 +10,9 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 a{
   text-decoration: none;
 }
+strong{
+  font-weight: bold;
+}
 h1{
   font-size:38px;
 }
@@ -47,6 +50,9 @@ article{
   padding: 15px;
   background-color: rgb(214, 214, 201);
 }
+article a{
+  text-decoration: underline;
+}
 aside{
   width:33%;
   padding-left: 15px;
@@ -68,7 +74,7 @@ section{
 
 small{
   background-color: greenyellow;
-  height: 60px;
+  height: 100px;
   width: 980px;
 }
 /* 全体を真ん中に配置 */
@@ -100,7 +106,6 @@ small{
 .global-nav__item:nth-child(even) .global-nav__link{
   background-color:red;
 }
-
 .global-nav__link{
   display:flex;
 	align-items: center;
@@ -195,6 +200,24 @@ small{
   width:100%;
 }
 /*form*/
+label{
+  background-color: aqua;
+  padding: 5px;
+}
+input, .form-item__radio, .form-item__checkbox, {
+  background-color: darkorange;
+  display:flex;
+	align-items: center;
+}
+.form-item__text-input, .is-password, .form-item__textarea, .form-item__select-pull-down, .form-item__select-list-option {
+  width: 65%;
+  border-radius: 3px;
+  display:flex;
+	align-items: center;
+}
+textarea{
+  height: 100px;
+}
 .form{
   background-color: aquamarine;
 }
@@ -202,36 +225,54 @@ small{
   padding:20px;
 }
 .form-item{
-  padding: 10px 10px 10px 50px;
-  background-color: azure;
+  width: 100%;
+  background-color: mediumpurple;
 }
-.form-item__lavel{
-  padding: 20px;
+.form-item__label{
   background-color: blueviolet;
-}
-.form-item__text-input, .is-password, .form-item__textarea{
-  background-color: coral;
-  width: 400px;
-}
-.is-password{
-  background-color: darkblue;
-}
-.{
-  background-color: deeppink;
+  width: 30%;
+  padding-right: 20px;
+  float: left;
+  text-align: right;
 }
 .form-item__inline-item{
   background-color: gold;
 }
-.form-item__radio{
+.form-item__radio, .form-item__checkbox{
   background-color: greenyellow;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin: 10px;
+  text-align: center;
+  float: left;
+}
+.form-item__radio{
+  background-color: #EEEEEE;
+}
+.form-item__checkbox{
+  background-color: #dddddd;
+}
+.form-item__actions-items input{
+  background-color:red;
+  width: 50%;
+    display:flex;
+	align-items: center;
+  justify-content: center;
 }
 .form-item__actions-item{
+  float: left;
+  width: 32%;
   background-color: hotpink;
 }
-
-/*aside-ad*/
-
-
+.form-item__select-pull-down, .form-item__select-list-option{
+  margin-bottom: 0.5px;
+  border-radius: 3px;
+  background-color: #EEEEEE;
+}
+.form-item__file{
+  background-color: darkmagenta;
+  padding: 10px 20px;
+}
 /*local-nav*/
 .local-nav{
   padding: 10px;
@@ -266,6 +307,16 @@ small{
 .about-author{
   background-color: aqua;
 }
+.about-author__term{
+  background-color: blueviolet;
+  width: 90px;
+  padding-right: 10px;
+  float: left;
+  text-align: right;
+}
+.about-author__description{
+  background-color: brown;
+}
 .about-author__title{
   background-color: crimson;
   font-size: 16px;
@@ -278,7 +329,4 @@ small{
   padding: 20px;
   width: 75%;
   float: right;
-}
-/*footer-copyright*/
-.footer-copyright{
 }
