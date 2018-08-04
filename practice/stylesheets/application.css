@@ -1,5 +1,5 @@
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1.8;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ここにCSSを書いてデザインを入れよう */
 
@@ -7,172 +7,278 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 * {
   box-sizing: border-box;
 }
-
 a{
   text-decoration: none;
 }
-
+h1{
+  font-size:38px;
+}
+h2{
+  font-size:32px;
+}
+h3{
+  font-size:28px;
+}
+h4{
+  font-size:24px;
+}
+h5{
+  font: size 20px;
+}
 body {
-  color: #444;*/
-  /*background-color: #aaa;*/
-  background-color: rgb(0, 200, 200);
-  padding:0px 40px;
+  color: #444;
+  background-color: #aaa;
 }
 header{
-  height: 150px;
-  width: auto;
   display: flex;
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100px;
+  background-color:whitesmoke;
 }
 main{
-  padding: 20px;
-  background-color: rgb(0, 247, 255);
-  width:60%;
+  width: 67%;
+  padding: 0px 15px;
   float:right;
-}å
+}
+article{
+  line-height :35px;
+  padding: 15px;
+  background-color: rgb(214, 214, 201);
+}
+aside{
+  width:33%;
+  padding-left: 15px;
+  float: left;
+}
+footer{
+  display: inline-block;
+  width:980px;
+  padding: 10px;
+  background-color: bisque;
+}
+section{
+  width: 50%;
+  height: 400px;
+  padding: 20px;
+  float: right;
+  background-color: cornflowerblue;
+  }
 
+small{
+  background-color: greenyellow;
+  height: 60px;
+  width: 980px;
+}
 /* 全体を真ん中に配置 */
 .container {
   width: 980px;
   margin-left: auto;
   margin-right: auto;
-  padding:25px;
-  /*background-color: #666;*/
-  background-color:white;
+  background-color: #666;
   box-shadow: rgba(0, 0, 0, .4) 0 0 8px;
   overflow: hidden; // floatを使った場合の対策
 }
-
-h1{
-  font-size:38px;
-}
-h2{
-  font-size:28px;
-}
-h3{
-  font-size:24px;
-}
-h4{
-  font-size:20px;
-}
-
-.article__image{
-  width: 50%;
-  height: 50%;
-}
-
-.about-author__image{
-  width: 10%;
-  height: 10%;
-}
-
 /*global-nav*/
 .global-nav{
-  background-color: cadetblue;
+  width: 100%;
+  background-color: rgb(42, 148, 0);
 }
-
 .global-nav__items{
-  padding: 20px;
+  display: flex;
+  background-color: blueviolet;
 }
-.global-nav__items li{
-  float: left;
-  padding:20px;
+.global-nav__item{
+  height: 70px;
+  flex: 1;
+  background-color: rgb(149, 220, 183);
+}
+.global-nav__item:nth-child(odd) .global-nav__link{
+  background-color: blue;
+}
+.global-nav__item:nth-child(even) .global-nav__link{
+  background-color:red;
 }
 
+.global-nav__link{
+  display:flex;
+	align-items: center;
+  justify-content: center;
+  height:70px;
+  padding:0px 20px;
+  background-color: blanchedalmond;
+}
 /*bread*/
 .bread-crumbs{
-  background-color: burlywood;
-  padding:0px 20px;
+  width: auto;
+  background-color: rgb(50, 200, 70);
 }
-.bread-crumbs__items li{
-  float:left;
+.bread-crumbs__items{
+  display: flex;
+}
+.bread-crumbs__items li:not(:last-child)::after{
+  content: ">";
+  display: block;
   padding: 10px;
 }
-
-/*ad*/
+.bread-crumbs__item {
+  display:flex;
+	align-items: center;
+  float:left;
+  background-color: blueviolet;
+}
+.bread-crumbs__link{
+  display:flex;
+	align-items: center;
+  float:left;
+  height:30px;
+  margin-left:10px;
+}
+/*top-ad*/
 .top-ads{
+  display: inline-block;
+  width: auto;
+  background-color: aqua;
 }
-.top-ads__item{
+.top-ads__items{
 
-  padding:5px;
+}
+.top-ads__item {
   float: left;
+  padding:15px 0px 0px 15px;
+  width:33%;
 }
-
-/*header*/
-.main-header{
-  
+.top-ads__image{
+  width: 100%;
 }
-.main-header__title{
-
+.top-ads__link{
+  background-color:burlywood;
 }
 /*article*/
-article{
-  background-color: aliceblue;
-}
 .article__title{
+  display:flex;
+	align-items: center;
+  height: 50px;
+  padding: 30px;
+  background-color: aquamarine;
 }
 .article__paragraph{
+  padding: 15px 0px;
 }
 .article__sub-title{
+  display:flex;
+	align-items: center;
+  background-color: coral;
 }
 .article__unorder-list{
-
+  list-style: disc;
+  padding-left: 20px;
 }
 .article__unorder-list__item{
-
 }
 .article__blockquote{
-
+  padding: 10px 0px;
+}
+.article__blockquote-paragraph{
+  padding:10px 0px;
 }
 .article__sub-sub-title{
-
 }
 .article__order-list{
-
+  list-style-type: decimal;
+  padding-left: 20px;
 }
 .article__order-list__item{
-
 }
-
+.article__image{
+  width:100%;
+}
 /*form*/
 .form{
   background-color: aquamarine;
 }
 .form__title{
-
+  padding:20px;
 }
 .form-item{
-
+  padding: 10px 10px 10px 50px;
+  background-color: azure;
 }
 .form-item__lavel{
-
+  padding: 20px;
+  background-color: blueviolet;
 }
-/*aside*/
-aside{
+.form-item__text-input, .is-password, .form-item__textarea{
   background-color: coral;
-  float: left;
-  padding:20px;
+  width: 400px;
+}
+.is-password{
+  background-color: darkblue;
+}
+.{
+  background-color: deeppink;
+}
+.form-item__inline-item{
+  background-color: gold;
+}
+.form-item__radio{
+  background-color: greenyellow;
+}
+.form-item__actions-item{
+  background-color: hotpink;
+}
+
+/*aside-ad*/
+
+
+/*local-nav*/
+.local-nav{
+  padding: 10px;
+  background-color: indianred;
+}
+.local-nav__items{
+  background-color: aqua;
+}
+.local-nav__link{
+  padding: 5px;
+  background-color: whitesmoke;
 }
 /*footer*/
-footer{
-  background-color: bisque;
-  width:100%;
-  height:200px;
-}
 .footer-nav{
-  background-color:rgb(200, 220, 23)
-}
-.footer-nav__item{
-
+  display: flex;
+  width: 50%;
+  height: 400px;
+  float: left;
+  background-color: deeppink;
+  padding: 20px 0px 0px 20px;
 }
 .footer-nav__items{
-
+  padding-right:20px;
+  float: left;
 }
-.about-author{
-  background-color: cornflowerblue;
-  padding:20px;
+.footer-nav__items li::before{
+  content: ">";
+  display: inline;
+  padding: 10px;
 }
-.about-author__descriptions{
-
+/*aobut-author*/
+.about-author{
+  background-color: aqua;
+}
+.about-author__title{
+  background-color: crimson;
+  font-size: 16px;
+}
+.about-author__image{
+  width:25%;
+}
+.about-author dl{
+  background-color: khaki;
+  padding: 20px;
+  width: 75%;
+  float: right;
+}
+/*footer-copyright*/
+.footer-copyright{
 }
