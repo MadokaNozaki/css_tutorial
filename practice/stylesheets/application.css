@@ -42,7 +42,7 @@ header{
 }
 main{
   width: 67%;
-  padding: 0px 15px;
+  /* padding: 0px 15px; */
   float:right;
 }
 article{
@@ -55,28 +55,39 @@ article a{
 }
 aside{
   width:33%;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   float: left;
 }
 footer{
   display: inline-block;
   width:980px;
   padding: 10px;
-  background-color: bisque;
+  background-color :#444444;
 }
 section{
   width: 50%;
-  height: 400px;
-  padding: 20px;
+  padding: 10px;
   float: right;
-  background-color: cornflowerblue;
+  background-color: #CCCCCC;
+  border-radius: 6px;
+  font-size:10px;
   }
 
 small{
-  background-color: greenyellow;
-  height: 100px;
-  width: 980px;
+  background-color: #444;
+  width: 100%;
+  height: 60px;
+  display:flex;
+	align-items: center;
+  justify-content: center;
+  clear: both;
+  color: #fff;
 }
+
+.bread-crumbs__link, .local-nav__link, .footer-nav__link {
+  color:white;
+}
+
 /* 全体を真ん中に配置 */
 .container {
   width: 980px;
@@ -89,7 +100,7 @@ small{
 /*global-nav*/
 .global-nav{
   width: 100%;
-  background-color: rgb(42, 148, 0);
+  background-color: white;
 }
 .global-nav__items{
   display: flex;
@@ -113,6 +124,7 @@ small{
   height:70px;
   padding:0px 20px;
   background-color: blanchedalmond;
+  color:white;
 }
 /*bread*/
 .bread-crumbs{
@@ -126,6 +138,7 @@ small{
   content: ">";
   display: block;
   padding: 10px;
+  color: #fff;
 }
 .bread-crumbs__item {
   display:flex;
@@ -145,9 +158,6 @@ small{
   display: inline-block;
   width: auto;
   background-color: aqua;
-}
-.top-ads__items{
-
 }
 .top-ads__item {
   float: left;
@@ -209,29 +219,31 @@ input, .form-item__radio, .form-item__checkbox, {
   display:flex;
 	align-items: center;
 }
-.form-item__text-input, .is-password, .form-item__textarea, .form-item__select-pull-down, .form-item__select-list-option {
-  width: 65%;
+.form-item__text-input, .is-password, .form-item__textarea {
+  width: 60%;
   border-radius: 3px;
-  display:flex;
-	align-items: center;
+  align-items: center;
+}
+.form-item__select-pull-down, .form-item__select-list-option{
+  width: 60%;
 }
 textarea{
   height: 100px;
 }
 .form{
-  background-color: aquamarine;
+  background-color: white;
 }
 .form__title{
   padding:20px;
 }
 .form-item{
   width: 100%;
-  background-color: mediumpurple;
+  float:left;
 }
 .form-item__label{
-  background-color: blueviolet;
+
   width: 30%;
-  padding-right: 20px;
+  padding-right: 30px;
   float: left;
   text-align: right;
 }
@@ -242,7 +254,7 @@ textarea{
   background-color: greenyellow;
   border-radius: 3px;
   padding: 5px 15px;
-  margin: 10px;
+  margin: 0px 10px 10px 0px;
   text-align: center;
   float: left;
 }
@@ -251,13 +263,6 @@ textarea{
 }
 .form-item__checkbox{
   background-color: #dddddd;
-}
-.form-item__actions-items input{
-  background-color:red;
-  width: 50%;
-    display:flex;
-	align-items: center;
-  justify-content: center;
 }
 .form-item__actions-item{
   float: left;
@@ -271,28 +276,44 @@ textarea{
 }
 .form-item__file{
   background-color: darkmagenta;
-  padding: 10px 20px;
+  padding: 5px 0px;
+  width: 60%;
 }
+
 /*local-nav*/
 .local-nav{
-  padding: 10px;
-  background-color: indianred;
+  margin:15px;
+  height: 180px;
+  background-color: aqua;
+  border-radius:4px;
 }
 .local-nav__items{
-  background-color: aqua;
+  height: 180px;
+
+}
+.local-nav__item{
+  margin: 2px 2px 2px 0px;
+  background-color: coral;
+  width: 100%;
 }
 .local-nav__link{
-  padding: 5px;
-  background-color: whitesmoke;
+    /* background-color: blue; */
+    padding-left: 12px;
+    width:100%;
+    font-size: 20px;
+}
+ .local-nav__items .is-current{
+  /* background-color: blue; */
+  padding-left: 12px;
+  width:100%;
+  font-size: 20px;
 }
 /*footer*/
 .footer-nav{
-  display: flex;
   width: 50%;
-  height: 400px;
+
   float: left;
-  background-color: deeppink;
-  padding: 20px 0px 0px 20px;
+  padding: 10px 0px 0px 10px;
 }
 .footer-nav__items{
   padding-right:20px;
@@ -302,31 +323,27 @@ textarea{
   content: ">";
   display: inline;
   padding: 10px;
+  color:#fff;
 }
 /*aobut-author*/
-.about-author{
-  background-color: aqua;
-}
 .about-author__term{
-  background-color: blueviolet;
   width: 90px;
-  padding-right: 10px;
+  padding-right: 20px;
   float: left;
   text-align: right;
 }
 .about-author__description{
-  background-color: brown;
+  display: flex;
 }
 .about-author__title{
-  background-color: crimson;
   font-size: 16px;
 }
 .about-author__image{
-  width:25%;
+  width:23%;
+  border-radius: 50%;
 }
 .about-author dl{
-  background-color: khaki;
-  padding: 20px;
+  padding: 1px;
   width: 75%;
   float: right;
 }
