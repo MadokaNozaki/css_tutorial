@@ -273,7 +273,11 @@ textarea{
 }
 .form-item__actions-item{
   float: left;
+  width: 32.5%;
   background-color: hotpink;
+  display: flex;
+  justify-content: center;
+  height: 28px;
 }
 .form-item__select-pull-down, .form-item__select-list {
   margin-bottom: 0.5px;
@@ -281,8 +285,21 @@ textarea{
   background-color: #EEEEEE;
   width: 65%;
 }
+.form-item__select-list-option{
+  padding-bottom: 1px
+}
+.option.form-item__select-list-option {
+  border-bottom: 0.1px solid gray;
+  padding: 8px 10px;
+}
 .form-item__file{
-  background-color: darkmagenta;
+  width: 65%;
+  padding: 5px;
+  background-color: #eee;
+  border: 0.5px solid gray;
+}
+.is-submit, .is-reset{
+  color: #444444;
 }
 /*local-nav*/
 .local-nav{
