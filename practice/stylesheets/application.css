@@ -298,9 +298,7 @@ textarea{
   background-color: #eee;
   border: 0.5px solid gray;
 }
-.is-submit, .is-reset{
-  color: #444444;
-}
+
 /*local-nav*/
 .local-nav{
   margin-left: 16px;
