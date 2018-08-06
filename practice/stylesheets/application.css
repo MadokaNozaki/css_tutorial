@@ -7,6 +7,9 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 * {
   box-sizing: border-box;
 }
+html {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
 a{
   text-decoration: none;
 }
@@ -42,21 +45,25 @@ header{
 }
 main{
   width: 67%;
-  /* padding: 0px 15px; */
-  float:right;
+  padding: 0px 16px; 
+  float: right;
 }
 article{
   line-height :35px;
   padding: 15px;
-  background-color: rgb(214, 214, 201);
+  background-color: #dddddd;
+
 }
 article a{
   text-decoration: underline;
 }
-aside{
+.aside{
   width:33%;
-  /* padding-left: 15px; */
   float: left;
+}
+.aside-ads__image {
+  width: 100%;
+  padding: 16px 0px 0px 16px;
 }
 footer{
   display: inline-block;
@@ -73,7 +80,7 @@ section{
   font-size:10px;
   }
 
-small{
+.footer-copyright{
   background-color: #444;
   width: 100%;
   height: 60px;
@@ -82,6 +89,10 @@ small{
   justify-content: center;
   clear: both;
   color: #fff;
+}
+
+img{
+  vertical-align: bottom;
 }
 
 .bread-crumbs__link, .local-nav__link, .footer-nav__link {
@@ -104,7 +115,6 @@ small{
 }
 .global-nav__items{
   display: flex;
-  background-color: blueviolet;
 }
 .global-nav__item{
   height: 70px;
@@ -112,10 +122,10 @@ small{
   background-color: rgb(149, 220, 183);
 }
 .global-nav__item:nth-child(odd) .global-nav__link{
-  background-color: blue;
+  background-color :#d0d0d0;
 }
 .global-nav__item:nth-child(even) .global-nav__link{
-  background-color:red;
+  background-color:#b0b0b0;
 }
 .global-nav__link{
   display:flex;
@@ -129,7 +139,7 @@ small{
 /*bread*/
 .bread-crumbs{
   width: auto;
-  background-color: rgb(50, 200, 70);
+  background-color: #5e5e5e;
 }
 .bread-crumbs__items{
   display: flex;
@@ -144,31 +154,26 @@ small{
   display:flex;
 	align-items: center;
   float:left;
-  background-color: blueviolet;
 }
 .bread-crumbs__link{
-  display:flex;
-	align-items: center;
-  float:left;
-  height:30px;
   margin-left:10px;
 }
 /*top-ad*/
 .top-ads{
-  display: inline-block;
-  width: auto;
-  background-color: aqua;
+  padding: 16px;
+  background-color: #ccc;
+}
+.top-ads__items{
+  display: flex;
+  margin: 0px -8px;
 }
 .top-ads__item {
   float: left;
-  padding:15px 0px 0px 15px;
-  width:33%;
+  padding: 0px 8px 0px 8px;
+  width: 33.33%;
 }
 .top-ads__image{
   width: 100%;
-}
-.top-ads__link{
-  background-color:burlywood;
 }
 /*article*/
 .article__title{
@@ -176,6 +181,7 @@ small{
 	align-items: center;
   height: 50px;
   padding: 30px;
+  /* background-color: #dddddd; */
   background-color: aquamarine;
 }
 .article__paragraph{
@@ -199,6 +205,8 @@ small{
   padding:10px 0px;
 }
 .article__sub-sub-title{
+  font-size: 20px;
+  padding-top:20px;
 }
 .article__order-list{
   list-style-type: decimal;
@@ -211,24 +219,20 @@ small{
 }
 /*form*/
 label{
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 5px;
 }
-input, .form-item__radio, .form-item__checkbox, {
-  background-color: darkorange;
-  display:flex;
-	align-items: center;
+input{
+  border-radius: 3px;
 }
 .form-item__text-input, .is-password, .form-item__textarea {
-  width: 60%;
-  border-radius: 3px;
-  align-items: center;
+  width: 65%;
 }
 .form-item__select-pull-down, .form-item__select-list-option{
-  width: 60%;
+
 }
 textarea{
-  height: 100px;
+  height: 200px;
 }
 .form{
   background-color: white;
@@ -237,11 +241,15 @@ textarea{
   padding:20px;
 }
 .form-item{
-  width: 100%;
-  float:left;
 }
-.form-item__label{
 
+.form-item::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.form-item__label{
   width: 30%;
   padding-right: 30px;
   float: left;
@@ -251,12 +259,11 @@ textarea{
   background-color: gold;
 }
 .form-item__radio, .form-item__checkbox{
-  background-color: greenyellow;
-  border-radius: 3px;
-  padding: 5px 15px;
-  margin: 0px 10px 10px 0px;
-  text-align: center;
-  float: left;
+    border-radius: 3px;
+    float: left;
+    padding: 4px 10px;
+    margin: 15px 19px 8px 0px;
+    border: 0.2px solid gray;
 }
 .form-item__radio{
   background-color: #EEEEEE;
@@ -266,44 +273,38 @@ textarea{
 }
 .form-item__actions-item{
   float: left;
-  width: 32%;
   background-color: hotpink;
 }
-.form-item__select-pull-down, .form-item__select-list-option{
+.form-item__select-pull-down, .form-item__select-list {
   margin-bottom: 0.5px;
   border-radius: 3px;
   background-color: #EEEEEE;
+  width: 65%;
 }
 .form-item__file{
   background-color: darkmagenta;
-  padding: 5px 0px;
-  width: 60%;
 }
-
 /*local-nav*/
 .local-nav{
-  margin:15px;
+  margin-left: 16px;
   height: 180px;
-  background-color: aqua;
-  border-radius:4px;
+  border-radius: 3px;
+  padding-left: 0px;
 }
 .local-nav__items{
   height: 180px;
-
+  padding-top: 16px;
+  overflow: auto;
 }
 .local-nav__item{
-  margin: 2px 2px 2px 0px;
-  background-color: coral;
+  margin: 1px 0px 0px 0px;
+  padding: 8px;
+  background-color :#999999;
   width: 100%;
+  border-radius: 3px;
 }
-.local-nav__link{
-    /* background-color: blue; */
-    padding-left: 12px;
-    width:100%;
-    font-size: 20px;
-}
- .local-nav__items .is-current{
-  /* background-color: blue; */
+ .local-nav__items.is-current{
+  display: block;
   padding-left: 12px;
   width:100%;
   font-size: 20px;
@@ -311,12 +312,11 @@ textarea{
 /*footer*/
 .footer-nav{
   width: 50%;
-
   float: left;
   padding: 10px 0px 0px 10px;
 }
 .footer-nav__items{
-  padding-right:20px;
+  padding-right:10px;
   float: left;
 }
 .footer-nav__items li::before{
@@ -339,7 +339,7 @@ textarea{
   font-size: 16px;
 }
 .about-author__image{
-  width:23%;
+  width:15%;
   border-radius: 50%;
 }
 .about-author dl{
