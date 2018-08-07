@@ -17,10 +17,10 @@ strong{
   font-weight: bold;
 }
 h1{
-  font-size:38px;
+  font-size:46px;
 }
 h2{
-  font-size:32px;
+  font-size:38px;
 }
 h3{
   font-size:28px;
@@ -39,10 +39,40 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: 100px;
+  width: 100%;
   background-color:whitesmoke;
 }
+
+.main-header__title{
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 0 0 0 25px;
+}
+
+.main-header__title:before{
+  display: block;
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 100%;
+  background: #eee;
+}
+
+ .main-header__title:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-header__title:after{
+  border: 20px solid #ccc;
+  border-bottom-color: #AAA;
+  border-left-color: #aaa;
+}
+
 main{
   width: 67%;
   padding: 0px 16px; 
@@ -72,7 +102,7 @@ img{
 }
 .global-nav__items{
   display: flex;
-  
+
 }
 .global-nav__item{
   flex: 1;
@@ -203,7 +233,6 @@ textarea{
 .form{
   background-color: white;
   padding: 0 0 32px 13px;
-  
 }
 .form__title{
   padding:20px;
@@ -221,16 +250,14 @@ textarea{
   float: left;
   text-align: right;
 }
-.form-item__inline-item{
-  background-color: gold;
-}
+
 .form-item__radio, .form-item__checkbox{
-  border-radius: 3px;
-  float: left;
-  padding: 0px 12px;
-  margin: 0px 25px 18px 0px;
-  border: 1px solid #d7d7d7;
-  display: flex;
+    border-radius: 3px;
+    float: left;
+    padding: 0px 12px;
+    margin: 0px 25px 18px 0px;
+    border: 1px solid #d7d7d7;
+    display: flex;
 }
 .form-item__radio{
   background-color: #EEEEEE;
