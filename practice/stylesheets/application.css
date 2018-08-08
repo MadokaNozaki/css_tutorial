@@ -395,12 +395,12 @@ textarea{
 }
 /*box*/
 .form-item__radio, .form-item__checkbox{
-    border-radius: 3px;
-    float: left;
-    padding: 0px 12px;
-    margin: 0px 25px 18px 0px;
-    border: 1px solid #d7d7d7;
-    display: flex;
+  display: flex;
+  border-radius: 3px;
+  float: left;
+  padding: 0px 12px;
+  margin: 0px 25px 18px 0px;
+  border: 1px solid #d7d7d7;
 }
 .form-item__radio{
   background-color: #EEEEEE;
@@ -415,15 +415,15 @@ textarea{
 .form-item__select-pull-down, .form-item__select-list {
   margin-bottom: 0.5px;
   border-radius: 3px;
-  background-color: #EEEEEE;
   width: 65%;
+  background-color: #EEEEEE;
 }
 .form-item__select-list-option{
   padding-bottom: 1px
 }
 .option.form-item__select-list-option {
-  border-bottom: 0.1px solid gray;
   padding: 8px 10px;
+  border-bottom: 0.1px solid gray;
 }
 /*file*/
 .form-item__file{
@@ -473,9 +473,9 @@ input.form-item__action.is-submit, .is-reset {
 .local-nav__item{
   margin: 1px 0px 0px 0px;
   padding: 8px;
-  background-color :#999999;
   width: 100%;
   border-radius: 3px;
+  background-color :#999999;
 }
  .local-nav__items.is-current{
   display: block;
@@ -499,13 +499,13 @@ section{
   font-size:10px;
   }
 .footer-nav{
-  width: 50%;
   float: left;
+  width: 50%;
   padding: 10px 0px 0px 10px;
 }
 .footer-nav__items{
-  padding-right: 43px;
   float: left;
+  padding-right: 43px;
   font-size: 12px;
 }
 .footer-nav__items li::before{
@@ -516,10 +516,10 @@ section{
 }
 /*aobut-author*/
 .about-author__term{
-  width: 90px;
-  padding-right: 20px;
   float: left;
   text-align: right;
+  width: 90px;
+  padding-right: 20px;
 }
 .about-author__description{
   display: flex;
@@ -532,18 +532,18 @@ section{
   border-radius: 50%;
 }
 .about-author dl{
+  float: right;
   padding: 1px;
   width: 75%;
-  float: right;
 }
 /*copyright*/
 .footer-copyright{
-  background-color: #444;
-  width: 100%;
-  height: 50px;
   display:flex;
 	align-items: center;
   justify-content: center;
   clear: both;
+  width: 100%;
+  height: 50px;
   color: #fff;
+  background-color: #444;
 }
