@@ -22,8 +22,10 @@ h1{
 h2{
   font-size:38px;
 }
-h3{
-  font-size:28px;
+h3 {
+  font-size: 28px;
+  margin-bottom: 0px;
+  position: relative;
 }
 h4{
   font-size:24px;
@@ -37,11 +39,11 @@ body {
 }
 header {
   display: flex;
-  align-items: center;
+  position: relative;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: whitesmoke;
-  position: relative;
 }
 img{
   vertical-align: bottom;
@@ -53,34 +55,33 @@ img{
   margin-right: auto;
   background-color: #666;
   box-shadow: rgba(0, 0, 0, .4) 0 0 8px;
-  overflow: hidden; // floatを使った場合の対策
+  overflow: hidden; /*floatを使った場合の対策*/
 }
 /*リンク*/
 .bread-crumbs__link, .local-nav__link, .footer-nav__link {
   color:white;
 }
-
 /*市松アイコン*/
 .main-header__title:before {
   display: block;
-  content: "";
   position: absolute;
+  content: "";
+  left: 16px;
+  top: 22px;
   width: 14px;
   height: 14px;
   background: #999;
-  left: 16px;
-  top: 22px;
   border-right: 16px solid #444;
 }
 header.main-header::before {
-  content: '';
   display: block;
+  position: absolute;
+  content: '';
+  left: 16px;
+  top: 33px;
   height: 17px;
   width: 14px;
   background: #444;
-  position: absolute;
-  left: 16px;
-  top: 33px;
   border-right: solid #999 16px;
 }
 /*ページタイトル*/
@@ -93,8 +94,8 @@ header.main-header::before {
 /*折り返し*//*したのと繋げてもいいのでは*/
 .main-header__title:after {
   display: block;
-  content: "";
   position: absolute;
+  content: "";
   top: 0;
   right: 0;
 }
@@ -102,6 +103,7 @@ header.main-header::before {
   border: 20px solid #ccc;
   border-bottom-color: #AAA;
   border-left-color: #aaa;
+  box-shadow: 2px 2px 2px  rgba(0,0,0,0.3);
 }
 /*メイン*/
 main{
@@ -116,7 +118,6 @@ main{
 }
 .global-nav__items{
   display: flex;
-
 }
 .global-nav__item{
   flex: 1;
@@ -134,7 +135,7 @@ main{
   height: 55px;
   padding: 0px 20px;
   box-shadow: 3px 1px 7px -1px;
-  color: black;
+  color:#444;
 }
 /*bread*/
 .bread-crumbs{
@@ -225,18 +226,18 @@ article a{
 }
 .article__sub-title::before {
   display: block;
-  content: "";
   position: absolute;
+  content: "";
+  left: 2px;
+  top: 10px;
   width: 2px;
   height: 15px;
   background: #444;
-  left: 2px;
-  top: 10px;
 }
 .article__sub-title::after {
   display: block;
-  content: "";
   position: absolute;
+  content: "";
   width: 0;
   height: 0;
   left: 5px;
@@ -252,14 +253,15 @@ article a{
 }
 
 .article__sub-sub-title::before{
+  display: inline-block;
   content: "";
   position: absolute;
-  display: inline-block;
+  top: 28px;
+  left: 2px;
   width: 16px;
   height: 16px;
   background: #444;
-  top: 28px;
-  left: 2px;
+ 
   /* -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   -o-border-radius: 50px;
@@ -301,7 +303,8 @@ article a{
 }
 
 .form__title{
-  padding:20px;
+  padding-top:20px;
+  padding-left:50px;
 }
 .form-item::after {
   clear: both;
@@ -320,22 +323,54 @@ article a{
   margin-left: 12px;
 }
 p.article__blockquote-paragraph::before {
+  position: absolute;
   content: '"';
   top: 0px;
   left: -24px;
   display: flex;
   width: 42px;
   height: 42px;
-  background: #999;
   justify-content: center;
   align-items: center;
   font-size: 65px;
   padding-top: 26px;
   box-sizing: border-box;
-  position: absolute;
   border-radius: 50%;
+  background: #999;
 }
-
+.form__title::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 26px;
+  border: solid 2px #444;
+  position: absolute;
+  left: 0;
+}
+.form__title::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: solid 2px #444;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  transform: rotate(45deg);
+}
+.form {
+  position: relative;
+}
+.form::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+}
 /*label*/
 label{
   padding: 5px;
